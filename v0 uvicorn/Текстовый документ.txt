@@ -1,0 +1,19 @@
+Пример минимального FastAPI + Uvicorn
+main.py:
+
+python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+async def hello():
+    return {"message": "Hello Uvicorn!"}
+
+
+
+Запуск:
+
+bash
+uvicorn main:app --reload
+Теперь приложение доступно на http://127.0.0.1:8000

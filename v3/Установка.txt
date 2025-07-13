@@ -1,0 +1,29 @@
+##Простейший сайт на fastapi с bootstrap, jinja2 и SQLite.
+
+# Создаем новую директорию для проекта
+mkdir fastapi_simple_site
+cd fastapi_simple_site
+
+# Создаем виртуальную среду (для Windows используйте `python -m venv venv`)
+python3 -m venv venv
+
+# Активируем виртуальную среду
+# Для Linux/macOS:
+source venv/bin/activate
+# Для Windows:
+# venv\Scripts\activate
+
+# Устанавливаем FastAPI и Uvicorn (ASGI сервер)
+pip install fastapi uvicorn
+pip install jinja2
+pip install sqlalchemy databases[aiosqlite]
+pip install python-multipart
+
+uvicorn main:app --reload
+Теперь вы можете открыть в браузере:
+
+Главную страницу: http://127.0.0.1:8000/
+
+API endpoint: http://127.0.0.1:8000/api/hello
+
+Автоматическую документацию API: http://127.0.0.1:8000/docs
